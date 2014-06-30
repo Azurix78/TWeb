@@ -11,3 +11,9 @@
 !app/logs/.gitkeep
 
 *.log
+
+app/logs/dev.log
+
+app/cache/dev/profiler/index.csv
+
+TWeb.zip
