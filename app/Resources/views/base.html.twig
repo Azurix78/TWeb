@@ -3,11 +3,51 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheet %}
+            {% stylesheets output='css/style.css'
+                '../app/Resources/public/css/*' %}   
+        <link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="screen" />  
+            {% endstylesheets %}
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+        <section class="registerForm">
+          <h1 class="text-center marginB">Inscription à RocketProject</h1>
+            <a href="javascript:;" id="closeR">X</a>
+            <form method="POST">
+              <input type="text" name="name" placeholder="Votre nom">
+              <input type="text" name="mail" placeholder="Votre mail">
+              <input type="text" name="password" placeholder="Votre password">
+              <input type="text" name="password-confirm" placeholder="Confirmer votre password">
+              <input type="submit" value="Inscription" class="btn">
+            </form>
+        </section>
+
+        <section class="registerLogin">
+          <h1 class="text-center marginB">Connexion à RocketProject</h1>
+            <a href="javascript:;" id="closeL">X</a>
+            <form method="POST">
+              <input type="text" name="mail" placeholder="Votre mail">
+              <input type="text" name="password" placeholder="Votre password">
+              <input type="submit" value="Connexion" class="btn">
+            </form>
+        </section>
+
+        <div class="logins">
+            <div class="clear-right animated fadeInDown">
+                <a href-"javascript:;" class="btn register">Inscription</a>
+                <a href-"javascript:;" class="btn login">Connexion</a>
+            </div>
+        </div>
+        <header class="header">
+            <section class="head container animated fadeInLeft"></section>
+        </header>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            <script src="{{ asset('/js/jquery.js') }}" type="text/javascript"></script>
+            <script type="text/javascript" src="{{ asset('/js/script.js') }}"></script>
+        {% endblock %}
+        <footer class="footer container"></footer>
     </body>
 </html>

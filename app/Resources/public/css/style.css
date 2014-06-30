@@ -1,0 +1,255 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
+
+@keyframes hoverf
+{
+	from {height:0px;}
+	to {height:50px;}
+}
+
+@-webkit-keyframes hoverf /* Safari and Chrome */
+{
+	from {height:0px;}
+	to {height:50px;}
+}
+
+body{
+	background-color: #252525;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	color: grey;
+}
+
+em, i{
+	font-style: italic;
+}
+
+p{
+	margin-bottom: 18px;
+	line-height: 22px;
+}
+
+.container{
+	max-width: 960px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.text-center{
+	text-align: center;
+	display: block;
+}
+.text-justify{
+	text-align: justify;
+	display: block;
+}
+
+.float-left{
+	float: left;
+}
+.float-right{
+	float: right;
+}
+.clear-left{
+	float: left;
+	overflow: hidden;
+}
+.clear-right{
+	float: right;
+	overflow: hidden;
+}
+
+.btn{
+	padding: 10px 12px;
+	border-radius: 4px;
+	-o-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-ms-border-radius: 4px;
+	background-color: #47afd1;
+	display: inline-block;
+	color: white;
+	text-transform: uppercase;
+	font-family: 'Roboto Condensed', sans-serif;
+	cursor: pointer;
+}
+
+.btn:hover{
+	background-color: #59c2e4;
+}
+
+.logins{
+	padding: 10px;
+	overflow: hidden;
+}
+
+header.header{
+}
+
+header .head{
+	height: 480px;
+	background : url('/images/logo.png') center top no-repeat;
+	z-index: 1;
+}
+
+section.body{
+	background : url('/images/cloud.png') center top repeat-x white;
+	padding-top: 90px;
+	z-index: 9000;
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+}
+
+h1{
+	color: #47afd1;
+	padding: 10px 0;
+	font-size: 25px;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.marginB{
+	margin-bottom: 20px;
+}
+
+.agenda, .management, .team{
+	overflow: hidden;
+	margin-bottom: 40px;
+}
+
+.agenda .float-right, .team .float-left{
+	width:32%;
+	padding: 1% 5% 0 5%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;   
+}
+
+.team .float-left{
+	padding: 1% 10% 0 0;
+}
+
+.agenda .float-right img, .team .float-left img{
+	border: solid 10px #47afd1;
+	width: 100%;
+	border-radius: 50%;
+	-o-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-ms-border-radius: 50%;
+}
+
+.fleche{
+	width: 200px;
+	margin: 10px auto 40px;
+	cursor: pointer;
+	height: 50px;
+	background :white;
+	position: relative;
+}
+
+
+.fleche span{
+	z-index: 9999;
+	position: relative;
+	height: 50px;
+	width: 200px;
+	display: block;
+	margin: 0 auto;
+	background : url('/images/arrows.png') center center no-repeat;
+}
+
+.fleche:hover .hoverFleche{
+	-webkit-animation-name: hoverf;
+  	animation-name: hoverf;
+  	-webkit-animation-duration: 0.6s;
+  	animation-duration: 0.6s;
+	height: 50px;
+}
+
+.hoverFleche{
+	z-index: 100;
+	background-color: #47afd1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 190px;
+	right: 0;
+	height: 0px;
+}
+
+footer.footer{
+	height: 100px;
+	width: 100px;
+	background : url('/images/logofooter.png') center no-repeat;
+  	cursor: pointer;
+}
+
+
+footer.footer:hover{
+	background : url('/images/logofooterH.png') center no-repeat;
+}
+
+
+.registerForm, .registerLogin{
+	position:absolute;
+	right:-600px;
+	top:100px;
+	background-color:white;
+	padding:10px;
+	border-radius: 4px;
+	-o-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-ms-border-radius: 4px;
+	overflow:hidden;
+	z-index: 9999;
+}
+
+.registerLogin{
+	right: auto;
+	left: -600px;
+}
+
+.registerForm input, .registerLogin input{
+	display:block;
+	width:500px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border:none;
+	text-align:center;
+	border: solid 1px #47afd1;
+	padding: 14px 0;
+	margin: 10px 25px;
+	border-radius: 4px;
+	-o-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-ms-border-radius: 4px;
+}
+
+#closeR, #closeL{
+	position:absolute;
+	top:0px;
+	right: 0px;
+	text-decoration:none;
+	text-transform: uppercase;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight:600;
+	color:grey;
+	display:block;
+	background-color: #e1e1e1;
+	padding:8px 12px;
+	border-radius: 0 0 0 4px;
+	-o-border-radius: 0 0 0 4px;
+	-moz-border-radius: 0 0 0 4px;
+	-webkit-border-radius: 0 0 0 4px;
+	-ms-border-radius: 0 0 0 4px;
+}
+
+#closeR:hover, #closeL:hover{
+	background-color:#47afd1;
+	color:white;
+}

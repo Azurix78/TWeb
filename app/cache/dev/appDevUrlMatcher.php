@@ -27,6 +27,32 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         $context = $this->context;
         $request = $this->request;
 
+        if (0 === strpos($pathinfo, '/css/style')) {
+            // _assetic_b275595
+            if ($pathinfo === '/css/style.css') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'b275595',  'pos' => NULL,  '_format' => 'css',  '_route' => '_assetic_b275595',);
+            }
+
+            if (0 === strpos($pathinfo, '/css/style_part_1_')) {
+                // _assetic_b275595_0
+                if ($pathinfo === '/css/style_part_1_animate_1.css') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'b275595',  'pos' => 0,  '_format' => 'css',  '_route' => '_assetic_b275595_0',);
+                }
+
+                // _assetic_b275595_1
+                if ($pathinfo === '/css/style_part_1_reset_2.css') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'b275595',  'pos' => 1,  '_format' => 'css',  '_route' => '_assetic_b275595_1',);
+                }
+
+                // _assetic_b275595_2
+                if ($pathinfo === '/css/style_part_1_style_3.css') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'b275595',  'pos' => 2,  '_format' => 'css',  '_route' => '_assetic_b275595_2',);
+                }
+
+            }
+
+        }
+
         if (0 === strpos($pathinfo, '/_')) {
             // _wdt
             if (0 === strpos($pathinfo, '/_wdt') && preg_match('#^/_wdt/(?P<token>[^/]++)$#s', $pathinfo, $matches)) {
