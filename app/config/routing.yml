@@ -2,7 +2,4 @@ rocket_project:
     resource: "@RocketProjectBundle/Resources/config/routing.yml"
     prefix:   /
 
-rocket_users:
-    resource: "@RocketUsersBundle/Resources/config/routing.yml"
-    prefix:   /
 
