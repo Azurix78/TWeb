@@ -38,3 +38,7 @@ app/cache/dev/appDevUrlGenerator.php.meta
 
 
 app/cache/dev/appDevUrlGenerator.php.meta
+
+app/logs/dev.log
+
+app/cache/dev/profiler/index.csv
